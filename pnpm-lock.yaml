@@ -5,9 +5,11 @@ specifiers:
   rollup-preset-solid: ^1.0.1
   solid-js: ^1.1.7
   typescript: ^4.4.4
+  valtio: ^1.2.12
 
 dependencies:
   solid-js: 1.1.7
+  valtio: 1.2.12
 
 devDependencies:
   rollup: 2.58.0
@@ -609,6 +611,10 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /proxy-compare/2.0.2:
+    resolution: {integrity: sha512-3qUXJBariEj3eO90M3Rgqq3+/P5Efl0t/dl9g/1uVzIQmO3M+ql4hvNH3mYdu8H+1zcKv07YvL55tsY74jmH1A==}
+    dev: false
+
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -744,3 +750,24 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /valtio/1.2.12:
+    resolution: {integrity: sha512-TlQkbSma4aAAgs6tQXrvGilMZBVH0q8gbbWxRbo2R43FhkW4lWi45f9jC6gAdJdC40bsNnYyBsYDB9OOKNlqSw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@babel/helper-module-imports': '>=7.12'
+      '@babel/types': '>=7.13'
+      babel-plugin-macros: '>=3.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@babel/helper-module-imports':
+        optional: true
+      '@babel/types':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      proxy-compare: 2.0.2
+    dev: false
