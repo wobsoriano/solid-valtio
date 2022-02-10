@@ -1,17 +1,34 @@
-# {{ name_of_lib }}
+# solid-valtio
 
-{{ desc_of_lib }}
+💊 Valtio state for Solid
 
 ## Quick start
 
 Install it:
 
 ```bash
-pnpm add {{ me }}/{{ name_of_lib }}
+pnpm add valtio solid-valtio
 ```
 
 Use it:
 
 ```tsx
-import {{ name_of_lib }} from '{{ name_of_lib }}'
+import { proxy } from 'valtio/vanilla';
+import { useSnapshot } from 'solid-valtio';
+
+const state = proxy({ count: 0 });
+
+function Counter() {
+  const snap = useSnapshot(state);
+  return (
+    <div>
+      {snap.count}
+      <button onClick={() => ++state.count}>+1</button>
+    </div>
+  );
+}
 ```
+
+## License
+
+MIT License © 2022 [Robert Soriano](https://github.com/wobsoriano)

@@ -1,6 +1,6 @@
-import { subscribe, snapshot } from 'valtio/vanilla';
 import { createStore, reconcile, Store } from 'solid-js/store';
 import { onCleanup } from 'solid-js';
+import { subscribe, snapshot } from 'valtio/vanilla';
 
 function unproxy(proxyObject: Record<any, any>) {
   return JSON.parse(JSON.stringify(proxyObject));
