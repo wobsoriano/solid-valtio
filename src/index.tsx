@@ -1,17 +1,13 @@
-import { createStore, reconcile, Store } from 'solid-js/store';
+import { createStore, reconcile, Store, unwrap } from 'solid-js/store';
 import { onCleanup } from 'solid-js';
 import { subscribe, snapshot } from 'valtio/vanilla';
 
-function unproxy(proxyObject: Record<any, any>) {
-  return JSON.parse(JSON.stringify(proxyObject));
-}
-
 export function useSnapshot<T extends object>(proxyObject: T) {
-  const [state, setState] = createStore(unproxy(proxyObject));
+  const [state, setState] = createStore(unwrap(proxyObject));
 
   const close = subscribe(proxyObject, () => {
     const snap = snapshot(proxyObject);
-    setState(reconcile(unproxy(snap)));
+    setState(reconcile(unwrap(snap)));
   });
 
   onCleanup(close);
