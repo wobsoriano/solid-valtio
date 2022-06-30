@@ -13,8 +13,7 @@ pnpm add valtio solid-valtio
 Use it:
 
 ```tsx
-import { proxy } from 'valtio/vanilla'
-import { useSnapshot } from 'solid-valtio'
+import { proxy, useSnapshot } from 'solid-valtio'
 
 const state = proxy({ count: 0 })
 
