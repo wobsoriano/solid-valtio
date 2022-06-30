@@ -1,6 +1,6 @@
 # solid-valtio
 
-💊 Valtio state for Solid
+💊 State management in Solid with [valtio](https://github.com/pmndrs/valtio).
 
 ## Quick start
 
