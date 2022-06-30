@@ -1,5 +1,5 @@
 export {
-  useSnapshot
+  useSnapshot,
 } from './useSnapshot'
 
 export {

@@ -38,7 +38,7 @@ const state = proxyWithComputed(
     count: 1,
   },
   {
-    doubled: (snap) => snap.count * 2,
+    doubled: snap => snap.count * 2,
   },
 )
 
@@ -50,7 +50,7 @@ const state2 = proxyWithComputed(
   },
   {
     fullName: {
-      get: (snap) => snap.firstName + ' ' + snap.lastName,
+      get: snap => `${snap.firstName} ${snap.lastName}`,
       set: (state, newValue) => {
         [state.firstName, state.lastName] = newValue.split(' ')
       },
@@ -64,8 +64,8 @@ const state = proxyWithComputed(
     count: 1,
   },
   {
-    doubled: (snap) => snap.count * 2,
-    quadrupled: (snap) => snap.doubled * 2,
+    doubled: snap => snap.count * 2,
+    quadrupled: snap => snap.doubled * 2,
   },
 )
 ```
