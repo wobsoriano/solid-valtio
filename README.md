@@ -7,7 +7,7 @@
 Install it:
 
 ```bash
-pnpm add valtio solid-valtio
+npm install solid-valtio
 ```
 
 Use it:
