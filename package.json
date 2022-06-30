@@ -1,5 +1,5 @@
 {
-  "version": "0.1.3",
+  "version": "0.1.4",
   "name": "solid-valtio",
   "description": "💊 Valtio state for Solid",
   "type": "module",
