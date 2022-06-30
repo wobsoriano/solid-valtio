@@ -1,7 +1,7 @@
 {
   "version": "0.1.4",
   "name": "solid-valtio",
-  "description": "💊 Valtio state for Solid",
+  "description": "💊 State management in Solid with valtio.",
   "type": "module",
   "files": [
     "dist"
