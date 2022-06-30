@@ -7,7 +7,7 @@ export function useSnapshot<T extends object>(proxyObject: T) {
 
   const close = subscribe(proxyObject, () => {
     const snap = snapshot(proxyObject);
-    setState(reconcile(unwrap(snap)));
+    setState(reconcile(snap as any));
   });
 
   onCleanup(close);
