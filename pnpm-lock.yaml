@@ -1,35 +1,22 @@
 lockfileVersion: 5.4
 
-importers:
+specifiers:
+  klona: ^2.0.5
+  rollup: ^2.58.0
+  rollup-preset-solid: ^1.4.0
+  solid-js: ^1.4.5
+  typescript: ^4.4.4
+  valtio: ^1.6.1
 
-  .:
-    specifiers:
-      rollup: ^2.58.0
-      rollup-preset-solid: ^1.4.0
-      solid-js: ^1.4.5
-      typescript: ^4.4.4
-      valtio: ^1.6.1
-    devDependencies:
-      rollup: 2.58.0
-      rollup-preset-solid: 1.4.0
-      solid-js: 1.4.5
-      typescript: 4.4.4
-      valtio: 1.6.1
+dependencies:
+  klona: 2.0.5
+  valtio: 1.6.1
 
-  playground:
-    specifiers:
-      solid-js: ^1.4.2
-      solid-valtio: workspace:*
-      typescript: ^4.6.4
-      vite: ^2.9.9
-      vite-plugin-solid: ^2.2.6
-    dependencies:
-      solid-js: 1.4.5
-      solid-valtio: link:..
-    devDependencies:
-      typescript: 4.7.4
-      vite: 2.9.13
-      vite-plugin-solid: 2.2.6
+devDependencies:
+  rollup: 2.58.0
+  rollup-preset-solid: 1.4.0
+  solid-js: 1.4.5
+  typescript: 4.4.4
 
 packages:
 
@@ -1867,6 +1854,11 @@ packages:
     hasBin: true
     dev: true
 
+  /klona/2.0.5:
+    resolution: {integrity: sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==}
+    engines: {node: '>= 8'}
+    dev: false
+
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: true
@@ -1885,12 +1877,6 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: true
-
-  /nanoid/3.3.4:
-    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
     dev: true
 
   /node-releases/2.0.5:
@@ -1925,18 +1911,9 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /postcss/8.4.14:
-    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.4
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: true
-
   /proxy-compare/2.1.0:
     resolution: {integrity: sha512-wapJ3h/w8fRSyPEG0y2WMV+tf9xwvj3nxM6aHVuPEOwKs/t5xLSKZb44ubNTiqq2T6lmEMHEWGMTaU2L6ddaFA==}
-    dev: true
+    dev: false
 
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
@@ -2071,21 +2048,6 @@ packages:
 
   /solid-js/1.4.5:
     resolution: {integrity: sha512-32NGpuabEJDTeQ7fjaTR2TLC7R/X5hbqhYdEQ1e+GcIK8r8+/V0Nv17eZQii5Z/97/mtdt8yi63chzg73qnz/A==}
-
-  /solid-refresh/0.4.1_solid-js@1.4.5:
-    resolution: {integrity: sha512-v3tD/OXQcUyXLrWjPW1dXZyeWwP7/+GQNs8YTL09GBq+5FguA6IejJWUvJDrLIA4M0ho9/5zK2e9n+uy+4488g==}
-    peerDependencies:
-      solid-js: ^1.3
-    dependencies:
-      '@babel/generator': 7.18.7
-      '@babel/helper-module-imports': 7.18.6
-      '@babel/types': 7.18.7
-      solid-js: 1.4.5
-    dev: true
-
-  /source-map-js/1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
-    engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map-support/0.5.20:
@@ -2194,7 +2156,7 @@ packages:
     resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dev: true
+    dev: false
 
   /valtio/1.6.1:
     resolution: {integrity: sha512-caSZhnKNHbsUNQSftEzIeDKFP9Wcmj2c1hrCLWA0vA4eUBu6vxqEPs/cm0ln8umF5L1xbQGppopt79xxELmkAg==}
@@ -2222,45 +2184,4 @@ packages:
     dependencies:
       proxy-compare: 2.1.0
       use-sync-external-store: 1.1.0
-    dev: true
-
-  /vite-plugin-solid/2.2.6:
-    resolution: {integrity: sha512-J1RnmqkZZJSNYDW7vZj0giKKHLWGr9tS/gxR70WDSTYfhyXrgukbZdIfSEFbtrsg8ZiQ2t2zXcvkWoeefenqKw==}
-    dependencies:
-      '@babel/core': 7.18.6
-      '@babel/preset-typescript': 7.18.6_@babel+core@7.18.6
-      babel-preset-solid: 1.4.5_@babel+core@7.18.6
-      merge-anything: 5.0.2
-      solid-js: 1.4.5
-      solid-refresh: 0.4.1_solid-js@1.4.5
-      vite: 2.9.13
-    transitivePeerDependencies:
-      - less
-      - sass
-      - stylus
-      - supports-color
-    dev: true
-
-  /vite/2.9.13:
-    resolution: {integrity: sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==}
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.14.48
-      postcss: 8.4.14
-      resolve: 1.22.1
-      rollup: 2.75.7
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
+    dev: false
