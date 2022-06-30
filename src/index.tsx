@@ -9,7 +9,7 @@ export function useSnapshot<T extends object>(proxyObject: T) {
 
   const close = subscribe(proxyObject, () => {
     const snap = snapshot(proxyObject);
-    const updatedState = klona(snap) as any
+    const updatedState = klona(snap) as any;
     setState(reconcile(updatedState));
   });
 
