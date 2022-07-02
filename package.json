@@ -20,8 +20,14 @@
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
+    },
+    "./vanilla": {
+      "types": "./dist/vanilla.d.ts",
+      "require": "./dist/vanilla.js",
+      "import": "./dist/vanilla.mjs"
     },
     "./utils": {
       "types": "./dist/utils.d.ts",
@@ -34,7 +40,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "utils.d.ts"
+    "*.d.ts"
   ],
   "scripts": {
     "build": "tsup",
