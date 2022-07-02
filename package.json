@@ -24,9 +24,9 @@
       "import": "./dist/index.mjs"
     },
     "./utils": {
-      "types": "./dist/utils.js",
+      "types": "./dist/utils.d.ts",
       "require": "./dist/utils.js",
-      "import": "./dist/utils.d.ts"
+      "import": "./dist/utils.mjs"
     }
   },
   "main": "./dist/index.js",
