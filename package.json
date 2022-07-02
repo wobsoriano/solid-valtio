@@ -19,14 +19,22 @@
     "store"
   ],
   "exports": {
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils.js",
+      "require": "./dist/utils.js",
+      "import": "./dist/utils.d.ts"
+    }
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "utils.d.ts"
   ],
   "scripts": {
     "build": "tsup",
