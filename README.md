@@ -33,7 +33,7 @@ function Counter() {
 You can also use utils like [proxyWithComputed](https://github.com/pmndrs/valtio#proxywithcomputed-util):
 
 ```tsx
-import { proxyWithComputed } from 'valtio/utils'
+import { proxyWithComputed } from 'solid-valtio/utils'
 
 const state = proxyWithComputed(
   {
