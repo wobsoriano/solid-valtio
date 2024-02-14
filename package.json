@@ -49,13 +49,14 @@
     "release": "bumpp && npm publish"
   },
   "peerDependencies": {
-    "solid-js": ">=1.4.0"
+    "solid-js": "^1.6.0",
+    "valtio": "^1.13.0"
   },
   "dependencies": {
-    "klona": "^2.0.5",
-    "valtio": "^1.6.1"
+    "klona": "^2.0.5"
   },
   "devDependencies": {
+    "valtio": "^1.13.1",
     "@antfu/eslint-config": "^0.25.2",
     "@antfu/ni": "^0.16.3",
     "bumpp": "^8.2.1",
