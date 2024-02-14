@@ -48,6 +48,7 @@
     "*.d.ts"
   ],
   "scripts": {
+    "dev": "vite serve dev",
     "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest watch",
@@ -62,9 +63,6 @@
   "peerDependencies": {
     "solid-js": "^1.6.0",
     "valtio": "^1.13.0"
-  },
-  "dependencies": {
-    "klona": "^2.0.5"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
