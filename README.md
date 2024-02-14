@@ -21,19 +21,23 @@ const state = proxy({ count: 0 })
 
 function Counter() {
   const snap = useSnapshot(state)
-  return (
-    <div>
-      {snap.count}
-      <button onClick={() => ++state.count}>+1</button>
-    </div>
-  )
+  return <button onClick={() => ++state.count}>{snap.count}</button>
+}
+```
+
+By default, `useSnapshot` returns a Solid [store](https://docs.solidjs.com/concepts/stores). If you want to use signals, you can pass an option to `useSnapshot`:
+
+```tsx
+function Counter() {
+  const snap = useSnapshot(state, { signal: true })
+  return <button onClick={() => ++state.count}>{snap().count}</button>
 }
 ```
 
 You can also use utils like [proxyWithComputed](https://github.com/pmndrs/valtio#proxywithcomputed-util):
 
 ```tsx
-import { proxyWithComputed } from 'solid-valtio/utils'
+import { proxyWithComputed } from 'valtio/utils'
 
 const state = proxyWithComputed(
   {
