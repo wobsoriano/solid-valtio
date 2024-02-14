@@ -9,7 +9,7 @@
 Install it:
 
 ```bash
-npm install solid-valtio
+npm install valtio solid-valtio
 ```
 
 Use it:
