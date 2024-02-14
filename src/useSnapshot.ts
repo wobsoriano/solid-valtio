@@ -4,7 +4,7 @@ import { onCleanup } from 'solid-js'
 import { snapshot, subscribe } from 'valtio/vanilla'
 import { klona } from 'klona/json'
 
-export function useSnapshot<T extends object>(proxyObject: T) {
+export function useSnapshot<T extends object>(proxyObject: T): Store<T> {
   const initialState = klona(proxyObject)
   const [state, setState] = createStore(initialState)
 
@@ -16,5 +16,5 @@ export function useSnapshot<T extends object>(proxyObject: T) {
 
   onCleanup(close)
 
-  return state as Store<T>
+  return state
 }
