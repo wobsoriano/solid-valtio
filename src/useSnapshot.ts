@@ -13,12 +13,12 @@ type Options<T extends object = {}> = {
   unwrapFn?: (proxyObject: T) => T
 }
 
-type UpdatedType<T, O extends Options> = O['signal'] extends true ? Accessor<T> : Store<T>;
+type UseSnapshotReturn<T, O extends Options> = O['signal'] extends true ? Accessor<T> : Store<T>;
 
-export function useSnapshot<T extends object, O extends Options>(proxyObject: T, options?: O): UpdatedType<T, O> {
+export function useSnapshot<T extends object, O extends Options>(proxyObject: T, options?: O): UseSnapshotReturn<T, O> {
   const unwrapFn = options?.unwrapFn ?? unwrap
   const initialState = unwrapFn(proxyObject)
-  
+
   if (options?.signal) {
     const [state, setState] = createSignal(initialState, options.signalOptions)
 
@@ -30,7 +30,7 @@ export function useSnapshot<T extends object, O extends Options>(proxyObject: T,
 
     onCleanup(close)
 
-    return state as UpdatedType<T, O>
+    return state as UseSnapshotReturn<T, O>
   }
 
   const [state, setState] = createStore(initialState)
@@ -43,5 +43,5 @@ export function useSnapshot<T extends object, O extends Options>(proxyObject: T,
 
   onCleanup(close)
 
-  return state as UpdatedType<T, O>
+  return state as UseSnapshotReturn<T, O>
 }
