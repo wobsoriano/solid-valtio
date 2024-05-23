@@ -76,6 +76,21 @@ const state = proxyWithComputed(
 )
 ```
 
+## Signals
+
+Fan of signals? Pass the `signal` option to `useSnapshot` and get a signal instead of a store:
+
+```tsx
+const state = proxy({ count: 0 })
+
+function Counter() {
+  const snap = useSnapshot(state, { signal: true })
+  return <button onClick={() => ++state.count}>{snap().count}</button>
+}
+```
+
+
+
 ## License
 
 MIT
