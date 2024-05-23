@@ -8,7 +8,7 @@ function unwrap<T extends object>(proxyObject: T): T {
 }
 
 type Options<T extends object = {}> = {
-  signal?: true
+  signal?: boolean
   signalOptions?: SignalOptions<T>
   unwrapFn?: (proxyObject: T) => T
 }
@@ -24,7 +24,7 @@ export function useSnapshot<T extends object, O extends Options>(proxyObject: T,
 
     const close = subscribe(proxyObject, () => {
       const snap = snapshot(proxyObject)
-      const updatedState = unwrapFn(snap) as any
+      const updatedState = unwrapFn(snap as any)
       setState(updatedState)
     })
 
@@ -37,7 +37,7 @@ export function useSnapshot<T extends object, O extends Options>(proxyObject: T,
 
   const close = subscribe(proxyObject, () => {
     const snap = snapshot(proxyObject)
-    const updatedState = unwrap(snap) as any
+    const updatedState = unwrap(snap as any)
     setState(reconcile(updatedState))
   })
 
